@@ -51,7 +51,8 @@ public class DiceGame {
 		int randomNum = (int)(Math.random()*diceSides) + 1;
 	        return randomNum; 
 	}
-	
+//method takes two integers that you created for the random numbers
+//This then adds the two numbers so if you craps, snake eyes, or craps it will print with that association
 	public static String diffPhrases(int num, int numTwo){
 		String word;
 		if (num + numTwo == 2){
