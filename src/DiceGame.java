@@ -21,8 +21,11 @@ public class DiceGame {
 		
 			System.out.println("Welcome to the Grand Circus Casino!\n");
 			System.out.println("How many sides should each die have?");
+//The scanner here allows the user to select the dice, which will head down to the second method to generate
+//random numbers from 1 to the amount the user selected. Ex: user inputs 10 it will generate random numbers 
+//from 1-10.
 			random = scan.nextInt();
-		
+// This while loop asks the user if he/she selects either y or Y to continue to another roll.		
 		while ((letter == 'y') || (letter == 'Y')){
 			System.out.println("Roll #1: ");
 			System.out.println(rollingDice(random));
@@ -30,14 +33,16 @@ public class DiceGame {
 			System.out.println("Roll Again? (Y/N)");
 			letter = scan.next().charAt(0);
 		}
-		
+		System.out.println("Goodbye");
 			
 		
 		
 	
 	}
 	
-	
+//method generates a random number from the scanner in the main method.
+//The + 1 pushes the starting point from 0 to 1
+//
 	public static int rollingDice(int diceSides){
 		int randomNum = (int)(Math.random()*diceSides) + 1;
 	        return randomNum; 
